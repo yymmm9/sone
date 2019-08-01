@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="minimal-ui, width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+
+<title>Page Title</title>
+  <style>
+h1,h2,h3,h4,h5,h6 { 
+font-size:100%; 
+font-weight:normal; 
+}
+	</style>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="	https://gist.githubusercontent.com/DavidWells/18e73022e723037a50d6/raw/ead7e72d11c847ad9b81f094686543522101c278/reset.css
+">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+<script src="https://cdn.jsdelivr.net/gh/yymmm9/sone/js/turn.js"></script>
+	
+	<script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting.css">
+<link rel="stylesheet" href="https://unpkg.com/splitting/dist/splitting-cells.css">
+	<style>
+		.loadee{
+			z-index: 40;
+			position: absolute;
+			background-color: white;
+			width:100%;
+				height:100%;
+		}
+</style>
+</head>
+  
+<body onload="loading()">
+	<div class="loadee" id="loadee">
+		<div class="center">
+	<h2 class="loading" data-splitting>Sushi One</h2>
+			<style>
+					.center{
+		text-align: center;
+						height: auto;
+	}
+	
+	.center h2{
+		font-family: 'Playfair Display', serif;
+		text-transform: uppercase;
+		margin-top: 25vh;
+		font-size: 7vh;
+		color: #333;
+		font-weight: normal;
+		line-height: 1;
+		margin: 25vh 0 0 0;
+	}
+	.loading .char {
+  overflow: hidden;
+  color: transparent;
+  letter-spacing: 2px;
+}
+.loading .char:before, .loading .char:after {
+  visibility: visible;
+  color: #000;
+}
+.loading .char:before {
+  animation: _before 1.5s cubic-bezier(0.9, 0, 0.2, 1) infinite;
+  animation-delay: calc(0.3s + ( 0.1s * ( var(--char-index)) ));
+  transform: translateY(0);
+  opacity: 1;
+}
+.loading .char:after {
+  animation: _after 1.5s cubic-bezier(0.9, 0, 0.2, 1) infinite;
+  animation-delay: calc(0.3s + ( 0.1s * ( var(--char-index)) ));
+  transform: translateY(100%);
+  opacity: 0;
+}
+@keyframes _before {
+  to {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+}
+@keyframes _after {
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+</style>
+			
+</div>
+	</div>
+	<div class="navbar">
+    <div class="container">
+      <div class="brand">
+        <svg id="brand" version="1.1" id="svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 144 45" style="enable-background:new 0 0 144 45;" xml:space="preserve">
+<style>
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#2f2f2f;}
+</style>
+<g>
+	<path class="st0" d="M7.1,34.4c-2.1,0-4.2,0-6.3,0c-0.3,0-0.4-0.2-0.4-0.4c-0.1-0.6-0.1-1.1-0.2-1.7C0,32,0,31.8,0,31.5
+		c0-0.2,0.1-0.3,0.3-0.2c0.8,0.3,1.7,0.2,2.5,0.2c2.8,0,5.5,0,8.3,0c0.3,0,0.6-0.2,0.8-0.3c0.1,0,0.1-0.2,0.1-0.3c0-0.8,0-1.6,0-2.4
+		c0-0.3-0.1-0.6-0.5-0.6c-0.6,0-1.1-0.1-1.7-0.1c-2.5,0-5,0-7.5,0c-0.6,0-1.2-0.3-1.6-0.7c-0.4-0.4-0.5-1-0.6-1.5
+		c0-0.5-0.1-1.1-0.1-1.6c0-1.2,0-2.4,0-3.6c0-0.8,0.5-1.5,1.3-1.9c0.5-0.3,1.1-0.4,1.6-0.4c3.8,0,7.5,0,11.3,0c0.3,0,0.6,0,0.9,0
+		c0.3,0,0.5,0.2,0.5,0.5c0,0.4,0,0.8,0.1,1.1c0,0.4,0.1,0.8,0.2,1.2c0,0.3-0.1,0.4-0.4,0.3C14.7,21.1,14,21,13.2,21
+		c-2.5,0-5.1,0-7.6,0c-0.2,0-0.4,0-0.6,0c-0.4,0.1-0.6,0.3-0.7,0.7c0,0.6,0,1.2,0,1.7c0,0.3,0.2,0.6,0.6,0.6
+		c0.4,0.1,0.8,0.2,1.3,0.2c2.6,0,5.1,0,7.7,0c0.4,0,0.7,0,1.1,0.1c0.3,0.1,0.6,0.4,0.9,0.7c0.4,0.4,0.5,0.9,0.5,1.5
+		c0,1.7,0,3.5,0,5.2c0,0.9-0.4,1.8-1.3,2.3c-0.6,0.3-1.2,0.3-1.8,0.3C11.1,34.4,9.1,34.4,7.1,34.4L7.1,34.4z"></path>
+	<path class="st0" d="M45.6,34.6c-2,0-4.1,0-6.1,0c-0.5,0-0.5-0.1-0.6-0.6c0-0.7-0.1-1.5-0.2-2.2c0-0.3,0.1-0.4,0.4-0.4
+		c0.6,0.1,1.3,0.2,1.9,0.2c2.8,0,5.7,0,8.5,0c0.4,0,0.8,0.1,1.1-0.3c0.1-0.2,0.3-0.5,0.3-0.8c0-0.5,0-1.1,0-1.7
+		c0-0.3-0.1-0.6-0.3-0.8c-0.1-0.1-0.3-0.2-0.4-0.2c-1.1,0-2.1,0-3.2,0c-1.9,0-3.8,0-5.7,0c-0.7,0-1.4-0.2-1.9-0.9
+		c-0.3-0.5-0.5-0.9-0.5-1.5c0-1.5,0-3.1,0-4.6c0-0.5,0.1-1.1,0.4-1.5c0.3-0.5,0.7-1,1.4-1.1c0.6-0.1,1.1-0.2,1.7-0.2
+		c3.5,0,7,0,10.5,0c0.3,0,0.7,0,1,0c0.4,0,0.6,0.1,0.6,0.6c0.1,0.7,0.2,1.5,0.3,2.2c0.1,0.4-0.1,0.5-0.4,0.4
+		c-0.5-0.1-0.9-0.2-1.4-0.2c-2.9,0-5.9,0-8.8,0c-0.8,0-1.2,0.5-1.2,1.3c0,0.4,0,0.8,0.1,1.1c0.1,0.6,0.5,0.8,1,0.8
+		c0.6,0,1.3,0,1.9,0c2.2,0,4.4,0,6.6,0c0.6,0,1.1,0.1,1.6,0.4c0.6,0.4,0.8,1,0.9,1.6c0.1,0.5,0.1,1.1,0.1,1.6c0,1.1,0,2.3,0,3.4
+		c0,0.7-0.2,1.5-0.6,2.1c-0.4,0.5-0.9,1-1.6,1C50.4,34.5,48,34.6,45.6,34.6L45.6,34.6z"></path>
+	<path class="st0" d="M66.4,25.3h4c0.4,0,0.5-0.1,0.5-0.5c0-1.1,0-2.2,0-3.3c0-0.5,0-1.1,0-1.6c0-0.4-0.2-0.9-0.3-1.3
+		c-0.1-0.4-0.1-0.6,0.4-0.6c1.4,0,2.7,0,4.1,0c0.3,0,0.5,0.1,0.3,0.4c-0.5,0.9-0.3,1.8-0.3,2.8c0,3.9,0,7.8,0,11.6
+		c0,0.4,0.2,0.8,0.3,1.2c0.1,0.5,0.1,0.5-0.4,0.5c-1.3,0-2.6,0-3.9,0c-0.2,0-0.4,0-0.4-0.1c0-0.2,0-0.4,0-0.7
+		c0.1-0.2,0.2-0.5,0.2-0.7c0-1.5,0-3.1,0-4.6c0-0.3-0.2-0.4-0.5-0.4c-2.3,0-4.6,0-6.8,0c-0.5,0-0.9,0-1.4,0c-0.3,0-0.4,0.1-0.4,0.4
+		c0,1.3,0,2.6,0,3.9c0,0.6,0,1.1,0.3,1.6c0.2,0.4,0.1,0.5-0.4,0.5c-1.3,0-2.5,0-3.8,0c-0.8,0-0.8-0.2-0.5-0.7
+		c0.3-0.6,0.3-1.2,0.3-1.7c0-3.9,0-7.7,0-11.6c0-0.6,0.1-1.3-0.3-1.9c0-0.1-0.1-0.2-0.1-0.3c-0.1-0.3,0-0.4,0.3-0.4c1,0,2,0,3,0
+		c0.4,0,0.8,0,1.2,0c0.3,0,0.5,0.2,0.4,0.5c-0.5,0.8-0.3,1.6-0.3,2.5c0,1.3,0,2.6,0,3.9c0,0.4,0.1,0.5,0.5,0.5H66.4z"></path>
+	<path class="st0" d="M19,25.7c0-2.1,0-4.2,0-6.2c0-0.2-0.1-0.5-0.2-0.7c-0.2-0.5-0.1-0.6,0.4-0.6c1.3,0,2.6,0,3.9,0
+		c0.5,0,0.6,0.2,0.4,0.6c-0.3,0.6-0.3,1.2-0.3,1.8c0,3.7,0,7.4,0,11.2c0,0.3,0.1,0.6,0.2,0.9c0.1,0.3,0.5,0.4,0.8,0.4
+		c1.1,0,2.1,0,3.2,0c1.2,0,2.4,0,3.6,0c0.6,0,0.9-0.6,1-1c0-0.2,0-0.5,0-0.8c0-3.7,0-7.5,0-11.2c0-0.5-0.2-0.9-0.4-1.3
+		c-0.2-0.4-0.1-0.5,0.3-0.5c1.4,0,2.7,0,4.1,0c0.4,0,0.5,0.1,0.3,0.4c-0.4,0.8-0.3,1.6-0.3,2.4c0,3.7,0,7.3,0,11
+		c0,0.7-0.2,1.4-0.7,2c-0.3,0.3-0.8,0.6-1.2,0.7c-1.9,0.1-3.7,0.2-5.6,0.2c-2.2,0-4.4,0-6.7,0c-0.8,0-1.6-0.2-2.2-0.8
+		c-0.5-0.6-0.7-1.3-0.7-2C19,29.7,19,27.7,19,25.7L19,25.7z"></path>
+	<path class="st0" d="M138.4,34.3c-1.5,0-3.1,0-4.6,0c-0.7,0-1.4-0.2-1.9-0.7c-0.3-0.3-0.5-0.7-0.6-1.1c-0.4-0.9-0.3-1.9-0.3-2.8
+		c0-1.4,0-2.9,0-4.3c0-0.7,0.1-1.4,0.4-2c0.2-0.5,0.7-0.8,1.2-1c0.9-0.4,1.9-0.2,2.9-0.2c2,0,3.9,0,5.9,0c0.6,0,1.2,0,1.8,0.3
+		c0.8,0.4,1.2,1,1.2,1.9c0,1.4,0,2.8,0,4.2c0,0.3-0.1,0.4-0.4,0.4c-1.5,0-3,0-4.6,0c-1.6,0-3.1,0-4.7,0c-0.4,0-0.5,0.2-0.5,0.5
+		c0,0.7,0,1.3,0,2c0,0.6,0.3,1,0.9,1c2.5,0,5,0,7.5,0c0.5,0,0.9-0.1,1.4-0.2c0.3-0.1,0.4,0,0.3,0.3c-0.1,0.4-0.2,0.9-0.3,1.3
+		c0,0.1-0.2,0.2-0.3,0.2C142,34.3,140.2,34.3,138.4,34.3L138.4,34.3z M137.8,27.6L137.8,27.6c1,0,2.1,0,3.1,0c0.3,0,0.4-0.1,0.4-0.4
+		c0-0.8,0-1.6,0-2.4c0-0.6-0.5-1-1-1c-1.6,0-3.2,0-4.8,0c-0.3,0-0.5,0-0.8,0.1c-0.3,0.1-0.5,0.3-0.5,0.7c0,0.8,0,1.7,0,2.5
+		c0,0.3,0.1,0.4,0.4,0.4C135.7,27.6,136.7,27.6,137.8,27.6"></path>
+	<path class="st0" d="M115.8,28.4c0-1.9,0-3.4,0-5c0-0.3-0.1-0.6-0.2-0.8c-0.1-0.3-0.1-0.4,0.3-0.4c0.9,0,1.7,0,2.6,0
+		c0.1,0,0.3,0.1,0.4,0.1c0.2,0.3,0.3,0.2,0.6,0.1c0.4-0.1,0.8-0.2,1.2-0.2c2,0,4,0,6,0c1.2,0,2.1,0.7,2.4,1.9c0.1,0.2,0,0.4,0,0.6
+		c0,2.7,0,5.3,0,7.9c0,0.4,0.1,0.9,0.2,1.3c0,0.3-0.1,0.4-0.3,0.4c-0.8,0-1.5,0-2.3,0c-0.2,0-0.3,0-0.5,0c-0.4,0-0.5-0.2-0.4-0.5
+		c0.1-0.3,0.2-0.6,0.2-0.9c0-2.7,0-5.3,0-8c0-0.7-0.5-1.1-1.1-1.1c-1.5,0-3,0-4.5,0c-0.8,0-1.2,0.3-1.2,1.1c0,1,0,2.1,0,3.1
+		c0,1.4,0,2.9,0,4.3c0,0.4,0.1,0.9,0.2,1.3c0.1,0.3,0,0.6-0.4,0.6c-1,0-2,0-3,0c-0.2,0-0.3-0.2-0.3-0.4
+		C116.1,32,115.6,30.1,115.8,28.4"></path>
+	<path class="st0" d="M78.5,26.4c0-1.9,0-3.9,0-5.8c0-0.7-0.1-1.4-0.4-2.1c-0.2-0.3-0.1-0.5,0.3-0.5c1.4,0,2.7,0,4.1,0
+		c0.4,0,0.6,0.2,0.4,0.6c-0.3,0.5-0.3,1-0.3,1.5c0,4.4,0,8.8,0,13.2c0,0.1,0.1,0.3,0.1,0.4c0.1,0.1,0.1,0.3,0.2,0.4
+		c0.1,0.3,0,0.4-0.3,0.4c-1,0-2,0-3,0c-0.4,0-0.8,0-1.2,0c-0.2,0-0.3-0.1-0.3-0.3c0-0.2,0-0.4,0.1-0.5c0.3-0.4,0.3-0.8,0.3-1.2
+		C78.4,30.5,78.4,28.5,78.5,26.4L78.5,26.4z"></path>
+	<path class="st0" d="M88.9,25.5c1.2,0,2.5,0,3.7,0c0.4,0,0.5,0.1,0.5,0.5c0,0.4,0,0.9,0,1.3c0,0.3-0.1,0.4-0.4,0.4
+		c-2.4,0-4.7,0-7.1,0c-0.9,0-0.9,0-0.9-1c0-0.2,0-0.5,0-0.7c0-0.3,0.1-0.5,0.4-0.5C86.5,25.5,87.7,25.5,88.9,25.5L88.9,25.5z"></path>
+	<path class="st0" d="M80.6,10.9c1.6,0,2.9,1.4,2.9,3c0,1.6-1.4,2.9-3,2.8c-1.6,0-2.9-1.4-2.9-3C77.6,12.2,78.9,10.9,80.6,10.9"></path>
+	<path class="st0" d="M116.7,13.1c-0.1-0.9-0.3-1.7-1-2.3c-0.4-0.3-0.8-0.6-1.2-0.8c-4.4-2.2-9.2-0.6-10.6,0c-0.2,0-0.3,0.1-0.5,0.2
+		c-0.2,0.1-0.4,0.2-0.6,0.3c-0.5,0.3-1,0.7-1.5,1c-0.3,0.2-0.6,0.3-0.9,0.3c-1.1-0.1-2.1-0.1-3.2-0.2c-1-0.1-2,0.1-2.9,0.3
+		c-0.7,0.1-1.3,0.5-1.8,1.1c-0.4,0.5-0.4,1.1-0.3,1.6c0.1,0.8,0.5,1.4,1.1,1.8c0.6,0.3,1.2,0.5,1.9,0.6c0.8,0.1,0.6,0.2,0.7,0.8
+		c0,0.1,0,0.2,0,0.2c0,0.4,0,0.8,0,1.2c0,0.2,0.1,0.4,0.3,0.3c0.5-0.2,1.1-0.4,1.6-0.5c1.1-0.3,2.3-0.6,3.4-0.7
+		c1.2-0.1,2.4-0.1,3.5-0.1c0.7,0,1.4,0,2.1,0c0.8,0.1,1.6,0.2,2.4,0.3c0.1,0,0.1,0,0.2,0c0.9,0.1,1.9,0.2,2.8,0.4
+		c0.4,0.1,0.5,0,0.5-0.3c0-0.6,0-1.2,0-1.8c0-0.3,0.1-0.5,0.4-0.6c0.5-0.2,1.1-0.4,1.6-0.7c0.9-0.4,1.5-1.1,1.9-2
+		C116.7,13.5,116.8,13.3,116.7,13.1"></path>
+	<path class="st0" d="M114.1,23.6c0-0.7,0.2-1.4-0.2-2.1c-0.1-0.2-0.2-0.3-0.4-0.5c-0.6-0.8-1.4-1.2-2.4-1.2c-2.1-0.1-4.2,0-6.3,0v0
+		c-1.9,0-3.9,0-5.8,0c-3.1,0.1-3.6,1.8-3.7,2.3v4.3c0,2.2,0,4.4,0,6.6c0,0.9,0.3,1.6,0.9,2.1c0.7,0.6,1.5,1,2.5,1
+		c3.8,0,7.6,0,11.4,0c1,0,2-0.1,2.9-0.7c0.5-0.3,0.8-0.7,1-1.2c0.2-0.4,0.2-0.9,0.2-1.4C114.1,29.7,114.1,26.6,114.1,23.6
+		 M104.7,29.8c-1.7,1.1-4.3,0-5.8-2.3c-1.5-2.4-1.4-5.2,0.3-6.3c1.7-1.1,4.3,0,5.8,2.3C106.5,25.9,106.4,28.7,104.7,29.8"></path>
+</g>
+</svg>
+      </div>
+			</div>
+		
+  </div>
+
+	<div class="main" id="main">
+		<section> <div class="box one"></div>
+			<div class="box green">
+				<h2 class="bgtext">Sconto di <span class="cr">10%</span><br> su Take Away</h2>
+			</div>
+			<div class="box red"></div>
+
+			<section>
+			
+<script>document.onscroll=function(){console.log(0.8*scrollY); TweenMax.set(".box, .box-2",{y: -0.8*-scrollY}); TweenMax.set(".box.green, .box-2",{y: -0.4*-scrollY}); TweenMax.set(".box.red, .box-2",{y: 0*-scrollY});}</script></section></section>
+  </div>
+  <div class="grid">
+    <div class="coll">
+          <div id="1" class="">
+            <h1 class="s1-h1">20% off</h1>
+            <p>Su Take Away</p>
+          </div>
+          <div id="1" class="s1-div1">
+            <h1 class="s1-h1">Lun - Dom</h1>
+            <p>12:00 - 14:30</p>
+          </div>
+          <div id="1" class="">
+            <h1 class="s1-h1">Martedì</h1><p>Chiuso</p></div></div>
+		
+	<div class="book-list">
+  <div class="book">
+		<a href="https://cdn.jsdelivr.net/gh/yymmm9/sone/cena.pdf">
+    <img src="https://cdn.jsdelivr.net/gh/yymmm9/sone/p/cover1.jpg">
+		</a>
+  </div>
+
+  <div class="book">
+		<a href="https://cdn.jsdelivr.net/gh/yymmm9/sone/cena.pdf">
+    <img src="https://cdn.jsdelivr.net/gh/yymmm9/sone/c/cover2.jpg">
+			</a>
+  </div>
+		</div>
+		
+	<div class="description">
+	<h1>Cucina tradizionale giapponese</h1>
+	<p>Elit a adipiscing pretium et odio torquent nibh vehicula maecenas mattis ut ac primis facilisis tristique nec ullamcorper sed in auctor fermentum hendrerit urna bibendum eget iaculis. Erat a dapibus hendrerit sapien vestibulum pharetra tempus ridiculus adipiscing imperdiet adipiscing risus tempus bibendum adipiscing diam a nisi a augue a erat suscipit scelerisque ridiculus.</p>
+		</div>
+		
+<div class="pn-ProductNav_Wrapper" id="">
+
+        <div class="polaroid deg" onclick="window.open('https://www.stream-italy.com','_self')">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwl7cPyDY766vfQlXfDeZ4sWr0Xs9phTtCyAOs-S9O2yvTaGTT" width="100%">
+  <div class="titre">
+    Sushi one
+  </div>
+</div>
+<div class="polaroid">
+<img src="https://i.ya-webdesign.com/images/grilled-salmon-png-11.png" width="100%">
+	<div class="titre">
+    Sushi one
+  </div>
+</div>
+<div class="polaroid deg5">
+<img src="https://www.planetsushi.hu/wp-content/uploads/sake_maki.jpg" width="100%">
+	<div class="titre">
+    Sushi one
+  </div>
+</div>
+  <div class="polaroid deg">
+<img src="https://dzpybaqldk5xx.cloudfront.net/prod/spree/1292/products/136/original/T93.TEMA_EBITEN_gamberofritto_maionese_e_insalata_1pz.jpg?1541537786" width="100%">
+		<div class="titre">
+    Sushi one
+  </div>
+</div>
+    </div>
+</nav>
+
+
+    <div class="gm">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11207.120286209221!2d11.0315176!3d45.3936071!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x70c3803c76f6e984!2sSushi+One!5e0!3m2!1szh-CN!2sit!4v1563981515482!5m2!1szh-CN!2sit" width="100%" height="400px" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
+   </div>
+	
+
+	<footer>
+		<h3>©copyright 2019 Sushi One s.r.l. All rights reserved</h3>
+		<ul>
+			<ol><a href="">Franchising</a></ol>
+			<ol><a href="">Contatti</a></ol>
+			<ol><a href="">Join us</a></ol>
+		</ul>
+	</footer>
+		</div>
+</body>
+</html>
